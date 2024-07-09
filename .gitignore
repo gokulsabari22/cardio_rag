@@ -1,0 +1,4 @@
+.gitattributes
+
+# Environment Variables
+.env
