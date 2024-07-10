@@ -11,7 +11,7 @@ load_dotenv()
 pc = Pinecone()
 
 # INDEX NAME
-INDEX_NAME = "CARDIO-DATA"
+INDEX_NAME = "cardio-data"
 
 # Initialize the embedding model
 embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
@@ -27,7 +27,7 @@ text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
     chunk_overlap=0
 )
 
-docs = text_splitter.split_documents()
+docs = text_splitter.split_documents(documents=document)
 
 # Create index if it does not exists
 if INDEX_NAME not in pc.list_indexes().names():
@@ -43,3 +43,10 @@ if INDEX_NAME not in pc.list_indexes().names():
 
 # Uploading files to the index
 doc_search = PineconeVectorStore.from_documents(documents=docs, embedding=embeddings, index_name=INDEX_NAME)
+
+vectorstore = PineconeVectorStore(index_name=INDEX_NAME, embedding=embeddings)
+
+question = "What causes heart attack"
+retriever = vectorstore.similarity_search(query=question, k=1)
+
+print(retriever)
