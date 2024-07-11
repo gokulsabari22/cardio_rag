@@ -16,10 +16,12 @@ def retriever(state: GraphState) -> List[Document]:
     state (dict): New key added to state, documents, that contains retrieved documents
     
     """
+    print("----------------RETRIEVE-------------------")
+
     question = state["question"]
     retrieve = vectorstore.similarity_search(query=question, k=1)
 
-    return {"question": question, "documents": retrieve}
+    return {"question": question, "documents": retrieve, "web_fallback": True}
 
 if __name__ == "__main__":
     res = retriever(state={"question": "What are the different values present in human heart"})
