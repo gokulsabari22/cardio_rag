@@ -7,12 +7,14 @@ class GraphState(TypedDict):
     question: question asked by the user
     generation: generation from the LLM model
     web search: does web search required
-    message: 
+    retries: number of retries
+    message: final response
     documents: documents extracted from the vector database
     
     """
     question: str
     generation: str
     web_fallback: bool
+    retries: int
     message: Annotated[list[BaseMessage], add_messages]
     documents: List[str]

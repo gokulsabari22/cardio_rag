@@ -2,7 +2,7 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-llm = ChatGroq(model="llama3-70b-8192", temperature=0)
+llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0)
 
 system = """
 You a question re-writer that converts an input question to a better version that is optimized for vectorstore retrieval.

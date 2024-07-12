@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatGroq(model="llama3-70b-8192", temperature=0)
+llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0)
 
 prompt: ChatPromptTemplate = hub.pull("rlm/rag-prompt")
 

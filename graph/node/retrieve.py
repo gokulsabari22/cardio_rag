@@ -4,7 +4,7 @@ from typing import List
 from langchain.schema import Document
 
 
-def retriever(state: GraphState) -> List[Document]:
+def retrieve(state: GraphState) -> List[Document]:
 
     """
     RETRIEVE DOCUMENTS
@@ -24,5 +24,5 @@ def retriever(state: GraphState) -> List[Document]:
     return {"question": question, "documents": retrieve, "web_fallback": True}
 
 if __name__ == "__main__":
-    res = retriever(state={"question": "What are the different values present in human heart"})
+    res = retrieve(state={"question": "What are the different values present in human heart"})
     print(res)

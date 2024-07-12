@@ -46,7 +46,9 @@ embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
 
 vectorstore = PineconeVectorStore(index_name=INDEX_NAME, embedding=embeddings)
 
-question = "What is bicuspid aortic valve"
-retriever = vectorstore.similarity_search(query=question, k=1)
 
-print(retriever)
+if __name__ == "__main__":
+    question = "What is bicuspid aortic valve"
+    retriever = vectorstore.similarity_search(query=question, k=1)
+
+    print(retriever)

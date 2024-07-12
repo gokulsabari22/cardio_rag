@@ -7,7 +7,7 @@ load_dotenv()
 
 tool = TavilySearchResults(max_results=4)
 
-def web_search(state: GraphState):
+def websearch(state: GraphState):
     print("----------------WEB SEARCH---------------------")
     question = state["question"]
     documents = state["documents"]
@@ -23,5 +23,5 @@ def web_search(state: GraphState):
     return {"documents": documents, "web_fallback": False}
 
 if __name__ == "__main__":
-    res = web_search(state={"question": "What causes cardiac arrest?", "documents": None})
+    res = websearch(state={"question": "What causes cardiac arrest?", "documents": None})
     print(res)
