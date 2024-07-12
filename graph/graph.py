@@ -33,9 +33,9 @@ def grade_generation_v_documents_and_question(state: GraphState, config) -> Lite
     
     print("-----------------CHECK HALLUCINATION-------------------")
     hallucination_score = hallucination_grader.invoke({"documents": documents, "generation": generation})
-
+    
     # check hallucination
-    if hallucination_score.binary_score == "yes":
+    if hallucination_score.binary_score == "no":
         return "generate_answer" if retries < MAX_RETRIES else "search_web"
     
     print("-------------------DECISION: GENERATION IS GROUNDED IN DOCUMENTS-------")
