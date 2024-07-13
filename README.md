@@ -55,10 +55,12 @@ Flowchart for Visual presentation
 
 # Interacting with the agent
 
-First, make sure that your environment variables are set in .env file. 
+Before running the agent, ensure that your environment variables are set in the `.env` file: 
 
+'''python
 PINECONE_API_KEY = <YOUR API KEY>
 GOOGLE_API_KEY = <YOUR API KEY>
 LANGCHAIN_API_KEY = <YOUR API KEY>
 GROQ_API_KEY = <YOUR API KEY>
 TAVILY_API_KEY = <YOUR API KEY>
+'''
