@@ -63,3 +63,20 @@ GOOGLE_API_KEY = <YOUR API KEY>
 LANGCHAIN_API_KEY = <YOUR API KEY>
 GROQ_API_KEY = <YOUR API KEY>
 TAVILY_API_KEY = <YOUR API KEY>
+```
+
+```python
+from graph.graph import app
+from dotenv import load_dotenv
+
+load_dotenv()
+
+def run_llm(question: str) -> str:
+    answer = app.invoke({"question": question})
+    for final_answer in answer["message"]:
+        return final_answer.content
+
+if __name__ == "__main__":
+    res = run_llm("please provide me some information on Dr Omprakashm who is a neurologist?")
+    print(res)
+```
