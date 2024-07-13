@@ -77,7 +77,7 @@ def run_llm(question: str) -> str:
         return final_answer.content
 
 if __name__ == "__main__":
-    res = run_llm("?")
+    res = run_llm("What are the medical complications of heart transplant?")
     print(res)
 ```
 
