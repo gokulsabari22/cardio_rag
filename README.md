@@ -51,4 +51,4 @@ The system follows these steps to process and respond to user queries:
    - Provide this web-search-based response to the user.
 
 Flowchart for Visual presentation
-![Alt text](image.png)
+![Workflow Diagram](C:/Users/ASUS/OneDrive/Pictures/Screenshots/flowchart.png)
