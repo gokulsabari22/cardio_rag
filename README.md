@@ -11,13 +11,13 @@ The books can be found inside the data folder
 # Components
 The demo uses the following components:
 
--LLM: Mistral AI (mixtral-8x7b-32768) via LangChain's ChatGroq. Specifically, the LLM is used for three different tasks:
-    -answer generation
-    -grading answer hallucinations
-    -grading answer relevance
+LLM: Mistral AI (mixtral-8x7b-32768) via LangChain's ChatGroq. Specifically, the LLM is used for three different tasks:
+1. answer generation
+2. grading answer hallucinations
+3. grading answer relevance
 
--Embeddings: Google Embeddings (text-embedding-004) via LangChain's GoogleGenerativeAIEmbeddings
+Embeddings: Google Embeddings (text-embedding-004) via LangChain's GoogleGenerativeAIEmbeddings
 
--Vectorstore: Pinecone Vector DB (via LangChain's Pinecone)
+Vectorstore: Pinecone Vector DB (via LangChain's Pinecone)
 
--Web search: Tavily Search (via LangChain's TavilySearchResults)
+Web search: Tavily Search (via LangChain's TavilySearchResults)
