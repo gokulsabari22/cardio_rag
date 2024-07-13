@@ -53,3 +53,12 @@ The system follows these steps to process and respond to user queries:
 Flowchart for Visual presentation
 ![flowcahart](https://github.com/user-attachments/assets/e82a86c9-d0b2-41b4-aa4b-45626e28a768)
 
+# Interacting with the agent
+
+First, make sure that your environment variables are set in .env file. 
+
+PINECONE_API_KEY = <YOUR API KEY>
+GOOGLE_API_KEY = <YOUR API KEY>
+LANGCHAIN_API_KEY = <YOUR API KEY>
+GROQ_API_KEY = <YOUR API KEY>
+TAVILY_API_KEY = <YOUR API KEY>
