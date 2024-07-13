@@ -88,3 +88,5 @@ What are the medical complications of heart transplant?
 
 Generated Answer:
 Heart transplant recipients often experience medical complications such as hypertension, hyperlipidemia, and diabetes. Additionally, they are at risk for calcineurin inhibitor-induced renal insufficiency and malignant neoplasia, with post-transplantation lymphoproliferative disease and lung cancer being the most common fatal malignancies. Overimmunosuppression contributes to the increased risk of neoplasia in these patients.
+
+![image](https://github.com/user-attachments/assets/3820597a-9365-4879-9de2-5d9f8d0fd90f)
