@@ -77,6 +77,14 @@ def run_llm(question: str) -> str:
         return final_answer.content
 
 if __name__ == "__main__":
-    res = run_llm("please provide me some information on Dr Omprakashm who is a neurologist?")
+    res = run_llm("?")
     print(res)
 ```
+
+# Sample Question and Answer 
+
+Question asked:
+What are the medical complications of heart transplant?
+
+Generated Answer:
+Heart transplant recipients often experience medical complications such as hypertension, hyperlipidemia, and diabetes. Additionally, they are at risk for calcineurin inhibitor-induced renal insufficiency and malignant neoplasia, with post-transplantation lymphoproliferative disease and lung cancer being the most common fatal malignancies. Overimmunosuppression contributes to the increased risk of neoplasia in these patients.
