@@ -1,4 +1,4 @@
-# CARDIO RAG AGENT USINH LANGGRAPH
+# CARDIO RAG AGENT USING LANGGRAPH
 This is a demo for a RAG system that answers questions about heart related issues, symptoms and doubts powered by LangGraph and LangChain.
 
 # Data
