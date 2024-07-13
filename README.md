@@ -21,3 +21,34 @@ The demo uses the following components:
 - Vectorstore: Pinecone Vector DB (via LangChain's Pinecone)
 
 - Web search: Tavily Search (via LangChain's TavilySearchResults)
+
+# Architecture
+This project implements a custom RAG architecture that combines ideas from Self RAG and Corrective RAG.
+
+Papers referred:
+Self RAG: https://arxiv.org/pdf/2310.11511
+Corrective RAG: https://arxiv.org/pdf/2401.15884
+
+The system follows these steps to process and respond to user queries:
+
+1. Query the vector store to retrieve documents relevant to the user's question.
+
+2. Generate an initial response based on the retrieved documents.
+
+3. Evaluate the generated response for factual accuracy:
+   - If the response is factually grounded in the documents, proceed to step 4.
+   - If the response contains hallucinations, regenerate it (return to step 2).
+     This regeneration process is repeated up to N times (configurable by the user).
+
+4. Assess the response for relevance to the user's original question:
+   - If relevant, present the response to the user.
+   - If not relevant, reformulate the query and restart from step 1.
+     This reformulation process is repeated up to N times (configurable by the user).
+
+5. (Optional) If the response remains inaccurate or irrelevant after N attempts:
+   - Forward the original user question to a web search engine.
+   - Generate a new response based on the web search results.
+   - Provide this web-search-based response to the user.
+
+Flowchart for Visual presentation
+![Alt text](image.png)
